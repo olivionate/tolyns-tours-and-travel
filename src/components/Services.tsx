@@ -16,6 +16,7 @@ import beachImage from "@/assets/beach-diani.jpg";
 import mountainImage from "@/assets/mount-kenya.jpg";
 import culturalImage from "@/assets/cultural-maasai.jpg";
 import corporateImage from "@/assets/corporate-travel.jpg";
+import travelLogisticsImage from "@/assets/travel-logistics.jpg";
 
 const Services = () => {
   const services = [
@@ -63,7 +64,7 @@ const Services = () => {
       icon: Plane,
       title: "Travel Logistics",
       description: "Complete travel arrangements including flights, transfers, and documentation.",
-      image: null,
+      image: travelLogisticsImage,
       features: ["Flight Bookings", "Airport Transfers", "Visa Processing", "Travel Insurance"],
       price: "Service Based",
     },
