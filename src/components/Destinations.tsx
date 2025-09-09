@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Users, Star } from "lucide-react";
 
+// Import destination images
+import maasaiMaraImage from "@/assets/maasai-mara.jpg";
+import amboseliImage from "@/assets/amboseli-elephants.jpg";
+import dianiBeachImage from "@/assets/diani-beach-paradise.jpg";
+import mountKenyaImage from "@/assets/mount-kenya-summit.jpg";
+import lamuImage from "@/assets/lamu-old-town.jpg";
+import tsavoImage from "@/assets/tsavo-red-elephants.jpg";
+
 const Destinations = () => {
   const destinations = [
     {
@@ -13,7 +21,7 @@ const Destinations = () => {
       difficulty: "Easy",
       bestTime: "July - October",
       rating: 4.9,
-      image: "/api/placeholder/400/300"
+      image: maasaiMaraImage
     },
     {
       name: "Amboseli National Park",
@@ -24,7 +32,7 @@ const Destinations = () => {
       difficulty: "Easy",
       bestTime: "June - October",
       rating: 4.8,
-      image: "/api/placeholder/400/300"
+      image: amboseliImage
     },
     {
       name: "Diani Beach",
@@ -35,7 +43,7 @@ const Destinations = () => {
       difficulty: "Relaxing",
       bestTime: "December - March",
       rating: 4.7,
-      image: "/api/placeholder/400/300"
+      image: dianiBeachImage
     },
     {
       name: "Mount Kenya",
@@ -46,7 +54,7 @@ const Destinations = () => {
       difficulty: "Challenging",
       bestTime: "January - March",
       rating: 4.6,
-      image: "/api/placeholder/400/300"
+      image: mountKenyaImage
     },
     {
       name: "Lamu Island",
@@ -57,7 +65,7 @@ const Destinations = () => {
       difficulty: "Easy",
       bestTime: "December - March",
       rating: 4.5,
-      image: "/api/placeholder/400/300"
+      image: lamuImage
     },
     {
       name: "Tsavo National Parks",
@@ -68,7 +76,7 @@ const Destinations = () => {
       difficulty: "Moderate",
       bestTime: "June - October",
       rating: 4.4,
-      image: "/api/placeholder/400/300"
+      image: tsavoImage
     }
   ];
 
@@ -99,9 +107,11 @@ const Destinations = () => {
           {destinations.map((destination, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-safari transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg">
               <div className="relative h-48 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <MapPin className="w-12 h-12 text-primary/40" />
-                </div>
+                <img 
+                  src={destination.image} 
+                  alt={destination.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-1">{destination.name}</h3>
