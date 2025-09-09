@@ -18,17 +18,17 @@
     --popover: 35 35% 98%;
     --popover-foreground: 25 15% 12%;
 
-    /* Primary - Safari Green */
-    --primary: 120 35% 25%;
+    /* Primary - Brand Brown */
+    --primary: 10 50% 25%;
     --primary-foreground: 35 25% 97%;
-    --primary-glow: 120 45% 35%;
+    --primary-glow: 15 45% 35%;
 
     /* Secondary - Terracotta */
     --secondary: 15 65% 65%;
     --secondary-foreground: 35 25% 97%;
 
-    /* Accent - Golden Safari */
-    --accent: 45 85% 55%;
+    /* Accent - Brand Orange */
+    --accent: 20 90% 50%;
     --accent-foreground: 25 25% 15%;
 
     /* Muted Earth Tones */
@@ -42,19 +42,19 @@
     /* Borders and Inputs */
     --border: 35 15% 85%;
     --input: 35 15% 85%;
-    --ring: 120 35% 25%;
+    --ring: 10 50% 25%;
 
     /* Design System Enhancements */
     --radius: 0.75rem;
     
-    /* African Safari Gradients */
+    /* Tolyns Brand Gradients */
     --gradient-sunset: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-safari: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-safari: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
     --gradient-earth: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
 
     /* Elegant Shadows */
     --shadow-safari: 0 10px 40px -10px hsl(var(--primary) / 0.2);
-    --shadow-sunset: 0 10px 40px -10px hsl(var(--secondary) / 0.25);
+    --shadow-sunset: 0 10px 40px -10px hsl(var(--accent) / 0.25);
     --shadow-golden: 0 0 30px hsl(var(--accent) / 0.3);
 
     /* Smooth Transitions */

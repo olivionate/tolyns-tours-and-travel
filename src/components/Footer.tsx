@@ -74,7 +74,7 @@ const Footer = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-accent" />
-                  <span className="text-sm">+254 700 123 456</span>
+                  <span className="text-sm">+254725252412</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-accent" />
@@ -203,9 +203,9 @@ const Footer = () => {
               <span className="font-semibold">24/7 Emergency Support:</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <span className="text-accent font-bold">+254 700 EMERGENCY</span>
+              <span className="text-accent font-bold">+254725252412</span>
               <span className="text-primary-foreground/60">|</span>
-              <span className="text-accent font-bold">WhatsApp: +254 700 123 456</span>
+              <span className="text-accent font-bold">WhatsApp: +254725252412</span>
             </div>
           </div>
         </div>

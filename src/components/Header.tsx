@@ -22,7 +22,7 @@ const Header = () => {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+254 700 123 456</span>
+                <span>+254725252412</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
@@ -37,8 +37,13 @@ const Header = () => {
 
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold bg-gradient-safari bg-clip-text text-transparent">
+          <div className="flex items-center gap-3">
+            <img 
+              src="/lovable-uploads/f48fed82-3831-462d-9269-66fb62dffcc1.png" 
+              alt="Tolyns Tours & Travel" 
+              className="h-12 w-auto"
+            />
+            <h1 className="text-xl font-bold bg-gradient-safari bg-clip-text text-transparent">
               Tolyns Tours & Travel
             </h1>
           </div>

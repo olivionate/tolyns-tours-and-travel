@@ -18,8 +18,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "+254 700 123 456",
-      secondary: "+254 720 654 321",
+      primary: "+254725252412",
+      secondary: "+254725252412",
       description: "Available 24/7 for bookings and support"
     },
     {
@@ -208,12 +208,12 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2 text-destructive font-semibold">
               <Phone className="w-5 h-5" />
-              <span>Emergency: +254 700 EMERGENCY</span>
+              <span>Emergency: +254725252412</span>
             </div>
             <div className="text-muted-foreground">|</div>
             <div className="flex items-center gap-2 text-primary font-semibold">
               <MessageCircle className="w-5 h-5" />
-              <span>WhatsApp: +254 700 123 456</span>
+              <span>WhatsApp: +254725252412</span>
             </div>
           </div>
         </div>
