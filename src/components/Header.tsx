@@ -7,9 +7,9 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Destinations", href: "#destinations" },
-    { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
 
