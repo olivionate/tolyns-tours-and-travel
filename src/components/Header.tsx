@@ -41,7 +41,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/f48fed82-3831-462d-9269-66fb62dffcc1.png" 
               alt="Tolyns Tours & Travel" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
             <h1 className="text-xl font-bold bg-gradient-safari bg-clip-text text-transparent">
               Tolyns Tours & Travel
