@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-safari">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         {/* Top bar with contact info */}
         <div className="border-b border-border/50 py-2 hidden md:block">
           <div className="flex justify-between items-center text-sm text-muted-foreground">
@@ -37,14 +37,14 @@ const Header = () => {
 
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <img 
               src="/lovable-uploads/f48fed82-3831-462d-9269-66fb62dffcc1.png" 
               alt="Tolyns Tours & Travel" 
-              className="h-20 w-auto"
+              className="h-12 sm:h-16 md:h-20 w-auto"
             />
-            <h1 className="text-xl font-bold bg-gradient-safari bg-clip-text text-transparent">
-              Tolyns Tours & Travel
+            <h1 className="text-sm sm:text-base md:text-xl font-bold bg-gradient-safari bg-clip-text text-transparent leading-tight">
+              Tolyns Tours<span className="hidden xs:inline"> & Travel</span>
             </h1>
           </div>
 
