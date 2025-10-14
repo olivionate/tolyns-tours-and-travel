@@ -7,7 +7,7 @@ const Testimonials = () => {
       name: "Sarah Mitchell",
       location: "London, UK",
       rating: 5,
-      text: "Tolyns Tours made our Maasai Mara safari absolutely unforgettable! The guides were incredibly knowledgeable, and every detail was perfectly planned. We saw the Big Five and witnessed the Great Migration - truly a once-in-a-lifetime experience.",
+      text: "Tolyns Tours & Travel made our Maasai Mara safari absolutely unforgettable! The guides were incredibly knowledgeable, and every detail was perfectly planned. We saw the Big Five and witnessed the Great Migration - truly a once-in-a-lifetime experience.",
       tour: "5-Day Maasai Mara Safari",
       avatar: "SM"
     },
@@ -70,7 +70,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our adventurous travelers have to say about 
-            their unforgettable experiences with Tolyns Tours.
+            their unforgettable experiences with Tolyns Tours & Travel.
           </p>
         </div>
 

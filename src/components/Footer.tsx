@@ -185,7 +185,7 @@ const Footer = () => {
         <div className="border-t border-white/10 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-primary-foreground/60 text-center md:text-left">
-              © 2024 Tolyns Tours and Travel. All rights reserved. Licensed by Tourism Regulatory Authority (TRA) of Kenya.
+              © 2024 Tolyns Tours & Travel. All rights reserved. Licensed by Tourism Regulatory Authority (TRA) of Kenya.
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/60">
               <a href="#privacy" className="hover:text-accent transition-colors">Privacy Policy</a>

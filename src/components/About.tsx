@@ -39,7 +39,7 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About <span className="bg-gradient-safari bg-clip-text text-transparent">Tolyns Tours</span>
+            About <span className="bg-gradient-safari bg-clip-text text-transparent">Tolyns Tours & Travel</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Leading East Africa's travel revolution with passion, expertise, and an unwavering commitment to 
@@ -93,7 +93,7 @@ const About = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sunset">
-              <h3 className="text-xl font-bold text-foreground mb-4">Why Choose Tolyns Tours?</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">Why Choose Tolyns Tours & Travel?</h3>
               <div className="space-y-3">
                 {[
                   "Unmatched local expertise and authentic experiences",
