@@ -132,10 +132,12 @@ const Services = () => {
                   <span className="text-lg font-semibold text-secondary">
                     {service.price}
                   </span>
-                  <Button variant="safari" size="sm" className="group">
-                    Learn More
-                    <service.icon className="w-4 h-4 transition-transform group-hover:scale-110" />
-                  </Button>
+                  <a href="#contact">
+                    <Button variant="safari" size="sm" className="group">
+                      Learn More
+                      <service.icon className="w-4 h-4 transition-transform group-hover:scale-110" />
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
