@@ -14,33 +14,34 @@ import {
   Award,
   Heart
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
-    { name: "Wildlife Safaris", href: "#safaris" },
-    { name: "Beach Holidays", href: "#beach" },
-    { name: "Mountain Climbing", href: "#climbing" },
-    { name: "Cultural Tours", href: "#cultural" },
-    { name: "Corporate Travel", href: "#corporate" },
-    { name: "Custom Packages", href: "#custom" }
+    { name: "Wildlife Safaris", href: "/services/wildlife-safaris" },
+    { name: "Beach & Coastal", href: "/services/beach-coastal" },
+    { name: "Mountain Climbing", href: "/services/mountain-climbing" },
+    { name: "Cultural Tours", href: "/services/cultural-tours" },
+    { name: "Corporate Travel", href: "/services/corporate-travel" },
+    { name: "Travel Logistics", href: "/services/travel-logistics" }
   ];
 
   const destinations = [
-    { name: "Maasai Mara", href: "#mara" },
-    { name: "Amboseli", href: "#amboseli" },
-    { name: "Diani Beach", href: "#diani" },
-    { name: "Mount Kenya", href: "#mountkenya" },
-    { name: "Lamu Island", href: "#lamu" },
-    { name: "Tsavo Parks", href: "#tsavo" }
+    { name: "Maasai Mara", href: "/destinations/maasai-mara" },
+    { name: "Amboseli", href: "/destinations/amboseli" },
+    { name: "Diani Beach", href: "/destinations/diani-beach" },
+    { name: "Mount Kenya", href: "/destinations/mount-kenya" },
+    { name: "Lamu Island", href: "/destinations/lamu-island" },
+    { name: "Tsavo Parks", href: "/destinations/tsavo" }
   ];
 
   const company = [
-    { name: "About Us", href: "#about" },
-    { name: "Our Team", href: "#team" },
-    { name: "Sustainability", href: "#sustainability" },
-    { name: "Safety Guidelines", href: "#safety" },
-    { name: "Travel Blog", href: "#blog" },
-    { name: "Careers", href: "#careers" }
+    { name: "About Us", href: "/about-us" },
+    { name: "Our Team", href: "/about-us" },
+    { name: "Sustainability", href: "/about-us" },
+    { name: "Safety Guidelines", href: "/about-us" },
+    { name: "Travel Blog", href: "/" },
+    { name: "Careers", href: "/contact" }
   ];
 
   const socialLinks = [
@@ -107,12 +108,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -124,12 +125,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {destinations.map((destination, index) => (
                   <li key={index}>
-                    <a
-                      href={destination.href}
+                    <Link
+                      to={destination.href}
                       className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
                     >
                       {destination.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -156,12 +157,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {company.slice(0, 4).map((link, index) => (
                   <li key={index}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
