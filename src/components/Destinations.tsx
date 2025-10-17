@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Users, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Import destination images
 import maasaiMaraImage from "@/assets/maasai-mara.jpg";
@@ -21,7 +22,8 @@ const Destinations = () => {
       difficulty: "Easy",
       bestTime: "July - October",
       rating: 4.9,
-      image: maasaiMaraImage
+      image: maasaiMaraImage,
+      link: "/destinations/maasai-mara"
     },
     {
       name: "Amboseli National Park",
@@ -32,7 +34,8 @@ const Destinations = () => {
       difficulty: "Easy",
       bestTime: "June - October",
       rating: 4.8,
-      image: amboseliImage
+      image: amboseliImage,
+      link: "/destinations/amboseli"
     },
     {
       name: "Diani Beach",
@@ -43,7 +46,8 @@ const Destinations = () => {
       difficulty: "Relaxing",
       bestTime: "December - March",
       rating: 4.7,
-      image: dianiBeachImage
+      image: dianiBeachImage,
+      link: "/destinations/diani-beach"
     },
     {
       name: "Mount Kenya",
@@ -54,7 +58,8 @@ const Destinations = () => {
       difficulty: "Challenging",
       bestTime: "January - March",
       rating: 4.6,
-      image: mountKenyaImage
+      image: mountKenyaImage,
+      link: "/destinations/mount-kenya"
     },
     {
       name: "Lamu Island",
@@ -65,7 +70,8 @@ const Destinations = () => {
       difficulty: "Easy",
       bestTime: "December - March",
       rating: 4.5,
-      image: lamuImage
+      image: lamuImage,
+      link: "/destinations/lamu-island"
     },
     {
       name: "Tsavo National Parks",
@@ -76,7 +82,8 @@ const Destinations = () => {
       difficulty: "Moderate",
       bestTime: "June - October",
       rating: 4.4,
-      image: tsavoImage
+      image: tsavoImage,
+      link: "/destinations/tsavo"
     }
   ];
 
@@ -163,10 +170,12 @@ const Destinations = () => {
                   )}
                 </div>
 
-                <Button variant="safari" size="sm" className="w-full group">
-                  Explore {destination.name}
-                  <MapPin className="w-4 h-4 transition-transform group-hover:scale-110" />
-                </Button>
+                <Link to={destination.link}>
+                  <Button variant="safari" size="sm" className="w-full group">
+                    Explore {destination.name}
+                    <MapPin className="w-4 h-4 transition-transform group-hover:scale-110" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -201,9 +210,11 @@ const Destinations = () => {
             and experiences tailored to your interests and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="safari" size="lg">
-              Create Custom Tour
-            </Button>
+            <Link to="/#contact">
+              <Button variant="safari" size="lg">
+                Create Custom Tour
+              </Button>
+            </Link>
             <Button variant="outline" size="lg">
               View All Destinations
             </Button>

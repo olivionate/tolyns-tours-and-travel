@@ -13,6 +13,12 @@ import MountainClimbing from "./pages/services/MountainClimbing";
 import CulturalTours from "./pages/services/CulturalTours";
 import CorporateTravel from "./pages/services/CorporateTravel";
 import TravelLogistics from "./pages/services/TravelLogistics";
+import MaasaiMara from "./pages/destinations/MaasaiMara";
+import Amboseli from "./pages/destinations/Amboseli";
+import DianiBeach from "./pages/destinations/DianiBeach";
+import MountKenya from "./pages/destinations/MountKenya";
+import LamuIsland from "./pages/destinations/LamuIsland";
+import Tsavo from "./pages/destinations/Tsavo";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +32,12 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/destinations/maasai-mara" element={<MaasaiMara />} />
+          <Route path="/destinations/amboseli" element={<Amboseli />} />
+          <Route path="/destinations/diani-beach" element={<DianiBeach />} />
+          <Route path="/destinations/mount-kenya" element={<MountKenya />} />
+          <Route path="/destinations/lamu-island" element={<LamuIsland />} />
+          <Route path="/destinations/tsavo" element={<Tsavo />} />
           <Route path="/services/wildlife-safaris" element={<WildlifeSafaris />} />
           <Route path="/services/beach-coastal" element={<BeachCoastal />} />
           <Route path="/services/mountain-climbing" element={<MountainClimbing />} />
