@@ -27,6 +27,7 @@ const Services = () => {
       image: wildlifeImage,
       features: ["Maasai Mara", "Amboseli", "Tsavo", "Samburu"],
       price: "From $1,200",
+      link: "/services/wildlife-safaris",
     },
     {
       icon: Waves,
@@ -35,6 +36,7 @@ const Services = () => {
       image: beachImage,
       features: ["Diani Beach", "Watamu", "Lamu", "Malindi"],
       price: "From $800",
+      link: "/services/beach-coastal",
     },
     {
       icon: Mountain,
@@ -43,6 +45,7 @@ const Services = () => {
       image: mountainImage,
       features: ["Mount Kenya", "Kilimanjaro", "Mount Longonot", "Aberdares"],
       price: "From $1,500",
+      link: "/services/mountain-climbing",
     },
     {
       icon: Users,
@@ -51,6 +54,7 @@ const Services = () => {
       image: culturalImage,
       features: ["Maasai Villages", "Lamu Culture", "Bomas of Kenya", "Historical Sites"],
       price: "From $600",
+      link: "/services/cultural-tours",
     },
     {
       icon: Building,
@@ -59,6 +63,7 @@ const Services = () => {
       image: corporateImage,
       features: ["Team Building", "Conferences", "Incentive Travel", "Group Tours"],
       price: "Custom Quote",
+      link: "/services/corporate-travel",
     },
     {
       icon: Plane,
@@ -67,6 +72,7 @@ const Services = () => {
       image: travelLogisticsImage,
       features: ["Flight Bookings", "Airport Transfers", "Visa Processing", "Travel Insurance"],
       price: "Service Based",
+      link: "/services/travel-logistics",
     },
   ];
 
@@ -136,7 +142,7 @@ const Services = () => {
                   <span className="text-lg font-semibold text-secondary">
                     {service.price}
                   </span>
-                  <a href="#contact">
+                  <a href={service.link}>
                     <Button variant="safari" size="sm" className="group">
                       Learn More
                       <service.icon className="w-4 h-4 transition-transform group-hover:scale-110" />

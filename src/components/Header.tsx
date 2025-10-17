@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -21,12 +22,12 @@ const Header = () => {
   ];
 
   const services = [
-    { name: "Wildlife Safaris", href: "#wildlife-safaris" },
-    { name: "Beach & Coastal", href: "#beach-and-coastal" },
-    { name: "Mountain Climbing", href: "#mountain-climbing" },
-    { name: "Cultural Tours", href: "#cultural-tours" },
-    { name: "Corporate Travel", href: "#corporate-travel" },
-    { name: "Travel Logistics", href: "#travel-logistics" },
+    { name: "Wildlife Safaris", href: "/services/wildlife-safaris" },
+    { name: "Beach & Coastal", href: "/services/beach-coastal" },
+    { name: "Mountain Climbing", href: "/services/mountain-climbing" },
+    { name: "Cultural Tours", href: "/services/cultural-tours" },
+    { name: "Corporate Travel", href: "/services/corporate-travel" },
+    { name: "Travel Logistics", href: "/services/travel-logistics" },
   ];
 
   return (
@@ -88,12 +89,12 @@ const Header = () => {
                     {services.map((service) => (
                       <li key={service.name}>
                         <NavigationMenuLink asChild>
-                          <a
-                            href={service.href}
+                          <Link
+                            to={service.href}
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">{service.name}</div>
-                          </a>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                     ))}
@@ -141,14 +142,14 @@ const Header = () => {
                 <div className="font-medium text-foreground mb-2">Services</div>
                 <div className="pl-4 space-y-2">
                   {services.map((service) => (
-                    <a
+                    <Link
                       key={service.name}
-                      href={service.href}
+                      to={service.href}
                       className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
