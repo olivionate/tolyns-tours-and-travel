@@ -87,7 +87,11 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-safari transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden">
+            <Card 
+              key={index} 
+              id={service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
+              className="group hover:shadow-safari transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden scroll-mt-32"
+            >
               {service.image && (
                 <div className="relative h-48 overflow-hidden">
                   <img

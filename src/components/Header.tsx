@@ -21,12 +21,12 @@ const Header = () => {
   ];
 
   const services = [
-    { name: "Wildlife Safaris", href: "#contact" },
-    { name: "Beach & Coastal", href: "#contact" },
-    { name: "Mountain Climbing", href: "#contact" },
-    { name: "Cultural Tours", href: "#contact" },
-    { name: "Corporate Travel", href: "#contact" },
-    { name: "Travel Logistics", href: "#contact" },
+    { name: "Wildlife Safaris", href: "#wildlife-safaris" },
+    { name: "Beach & Coastal", href: "#beach-and-coastal" },
+    { name: "Mountain Climbing", href: "#mountain-climbing" },
+    { name: "Cultural Tours", href: "#cultural-tours" },
+    { name: "Corporate Travel", href: "#corporate-travel" },
+    { name: "Travel Logistics", href: "#travel-logistics" },
   ];
 
   return (
