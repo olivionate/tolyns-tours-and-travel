@@ -17,7 +17,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "Destinations", href: "/#destinations" },
+    { name: "Destinations", href: "/destinations" },
     { name: "Contact", href: "/#contact" },
   ];
 
@@ -112,7 +112,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <Link
-                  to="/#destinations"
+                  to="/destinations"
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
                 >
                   Destinations
@@ -187,7 +187,7 @@ const Header = () => {
               </div>
 
               <Link
-                to="/#destinations"
+                to="/destinations"
                 className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
