@@ -10,6 +10,9 @@ import DestinationsPage from "./pages/Destinations";
 import ContactPage from "./pages/ContactPage";
 import Sustainability from "./pages/Sustainability";
 import SafetyGuidelines from "./pages/SafetyGuidelines";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 import WildlifeSafaris from "./pages/services/WildlifeSafaris";
 import BeachCoastal from "./pages/services/BeachCoastal";
 import MountainClimbing from "./pages/services/MountainClimbing";
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/safety-guidelines" element={<SafetyGuidelines />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/destinations/maasai-mara" element={<MaasaiMara />} />
           <Route path="/destinations/amboseli" element={<Amboseli />} />
           <Route path="/destinations/diani-beach" element={<DianiBeach />} />

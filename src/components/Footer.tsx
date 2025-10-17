@@ -181,9 +181,9 @@ const Footer = () => {
               © 2024 Tolyns Tours & Travel. All rights reserved. Licensed by Tourism Regulatory Authority (TRA) of Kenya.
             </div>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="#privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
-              <a href="#terms" className="hover:text-accent transition-colors">Terms of Service</a>
-              <a href="#cookies" className="hover:text-accent transition-colors">Cookie Policy</a>
+              <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
+              <Link to="/cookie-policy" className="hover:text-accent transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>
