@@ -88,7 +88,7 @@ const Sustainability = () => {
                 <Leaf className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Our Commitment to <span className="bg-gradient-safari bg-clip-text text-transparent">Sustainability</span>
+                Our Commitment to <span className="text-primary">Sustainability</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 At Tolyns Tours & Travel, we believe that tourism should benefit not only travelers but also 

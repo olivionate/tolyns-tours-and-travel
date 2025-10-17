@@ -57,7 +57,7 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Get In <span className="bg-gradient-safari bg-clip-text text-transparent">Touch</span>
+            Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to embark on your African adventure? Our travel experts are here to help you 

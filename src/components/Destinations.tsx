@@ -101,7 +101,7 @@ const Destinations = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our <span className="bg-gradient-safari bg-clip-text text-transparent">Destinations</span>
+            Our <span className="text-primary">Destinations</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From the rolling savannahs of the Maasai Mara to the pristine beaches of the Indian Ocean, 
@@ -184,7 +184,7 @@ const Destinations = () => {
         {/* Regional Overview */}
         <div className="bg-white rounded-2xl p-8 shadow-sunset">
           <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-            Explore Kenya by <span className="bg-gradient-safari bg-clip-text text-transparent">Region</span>
+            Explore Kenya by <span className="text-primary">Region</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {regions.map((region, index) => (

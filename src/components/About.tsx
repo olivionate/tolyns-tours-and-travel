@@ -40,7 +40,7 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About <span className="bg-gradient-safari bg-clip-text text-transparent">Tolyns Tours & Travel</span>
+            About <span className="text-primary">Tolyns Tours & Travel</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Leading East Africa's travel revolution with passion, expertise, and an unwavering commitment to 
@@ -82,7 +82,7 @@ const About = () => {
               {achievements.map((achievement, index) => (
                 <Card key={index} className="text-center p-6 hover:shadow-safari transition-all duration-300 transform hover:-translate-y-1">
                   <CardContent className="p-0">
-                    <div className="text-3xl md:text-4xl font-bold bg-gradient-safari bg-clip-text text-transparent mb-2">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       {achievement.number}
                     </div>
                     <div className="text-muted-foreground font-medium">
@@ -116,7 +116,7 @@ const About = () => {
         {/* Core Values */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-foreground mb-12">
-            Our <span className="bg-gradient-safari bg-clip-text text-transparent">Core Values</span>
+            Our <span className="text-primary">Core Values</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (

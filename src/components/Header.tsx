@@ -87,7 +87,7 @@ const Header = () => {
               alt="Tolyns Tours & Travel" 
               className="h-12 sm:h-16 md:h-20 w-auto"
             />
-            <h1 className="text-sm sm:text-base md:text-xl font-bold bg-gradient-safari bg-clip-text text-transparent leading-tight">
+            <h1 className="text-sm sm:text-base md:text-xl font-bold text-primary leading-tight">
               Tolyns Tours & Travel
             </h1>
           </div>

@@ -66,7 +66,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            What Our <span className="bg-gradient-safari bg-clip-text text-transparent">Travelers Say</span>
+            What Our <span className="text-primary">Travelers Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our adventurous travelers have to say about 
@@ -78,7 +78,7 @@ const Testimonials = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-safari bg-clip-text text-transparent mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                 {stat.number}
               </div>
               <div className="text-muted-foreground font-medium">

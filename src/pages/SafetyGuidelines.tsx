@@ -114,7 +114,7 @@ const SafetyGuidelines = () => {
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Safety <span className="bg-gradient-safari bg-clip-text text-transparent">Guidelines</span>
+                Safety <span className="text-primary">Guidelines</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Your safety is our top priority. We maintain the highest safety standards across all our tours 
