@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Users, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-safari.jpg";
 
 const Hero = () => {
@@ -41,13 +42,17 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-            <Button variant="hero" size="lg" className="group w-full sm:w-auto text-sm sm:text-base">
-              Start Your Adventure
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-white/30 text-white hover:bg-white/10 w-full sm:w-auto text-sm sm:text-base">
-              View Our Safaris
-            </Button>
+            <Link to="/services/wildlife-safaris">
+              <Button variant="hero" size="lg" className="group w-full sm:w-auto text-sm sm:text-base">
+                Start Your Adventure
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+            <Link to="/destinations">
+              <Button variant="outline" size="lg" className="bg-transparent border-white/30 text-white hover:bg-white/10 w-full sm:w-auto text-sm sm:text-base">
+                View Our Safaris
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
