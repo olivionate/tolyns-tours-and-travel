@@ -37,10 +37,8 @@ const Footer = () => {
 
   const company = [
     { name: "About Us", href: "/about-us" },
-    { name: "Our Team", href: "/about-us" },
-    { name: "Sustainability", href: "/about-us" },
-    { name: "Safety Guidelines", href: "/about-us" },
-    { name: "Travel Blog", href: "/" },
+    { name: "Sustainability", href: "/sustainability" },
+    { name: "Safety Guidelines", href: "/safety-guidelines" },
     { name: "Careers", href: "/contact" }
   ];
 
@@ -135,11 +133,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Company & Certifications */}
+              {/* Company & Certifications */}
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2 mb-6">
-                {company.slice(0, 4).map((link, index) => (
+                {company.map((link, index) => (
                   <li key={index}>
                     <Link
                       to={link.href}
