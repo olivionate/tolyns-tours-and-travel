@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -10,9 +10,28 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -170,73 +189,115 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile Menu Backdrop */}
+        {isMenuOpen && (
+          <div 
+            className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 top-[100px]"
+            onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
+          />
+        )}
+
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-border/50 shadow-lg z-50">
-            <nav className="py-4 space-y-2">
+          <div className="md:hidden fixed top-[100px] left-0 right-0 bottom-0 bg-white/98 backdrop-blur-md border-t border-border/50 shadow-lg z-50 overflow-y-auto">
+            <nav className="py-4 space-y-1 max-h-[calc(100vh-100px)] pb-safe">
               <Link
                 to="/"
-                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                className="block px-6 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 text-base font-medium touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 to="/about-us"
-                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                className="block px-6 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 text-base font-medium touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
               
-              {/* Services Dropdown for Mobile */}
-              <div className="px-4 py-2">
-                <div className="font-medium text-foreground mb-2">Services</div>
-                <div className="pl-4 space-y-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.href}
-                      className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              {/* Services Collapsible Dropdown for Mobile */}
+              <Collapsible open={isServicesOpen} onOpenChange={setIsServicesOpen}>
+                <CollapsibleTrigger className="w-full flex items-center justify-between px-6 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 text-base font-medium touch-manipulation no-select">
+                  <span>Services</span>
+                  <ChevronDown 
+                    className={`w-5 h-5 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} 
+                  />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="bg-muted/30">
+                  <div className="py-2 space-y-1">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block px-10 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 touch-manipulation"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsServicesOpen(false);
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
 
-              {/* Destinations Dropdown for Mobile */}
-              <div className="px-4 py-2">
-                <div className="font-medium text-foreground mb-2">Destinations</div>
-                <div className="pl-4 space-y-2">
-                  {destinations.map((destination) => (
-                    <Link
-                      key={destination.name}
-                      to={destination.href}
-                      className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {destination.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              {/* Destinations Collapsible Dropdown for Mobile */}
+              <Collapsible open={isDestinationsOpen} onOpenChange={setIsDestinationsOpen}>
+                <CollapsibleTrigger className="w-full flex items-center justify-between px-6 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 text-base font-medium touch-manipulation no-select">
+                  <span>Destinations</span>
+                  <ChevronDown 
+                    className={`w-5 h-5 transition-transform duration-300 ${isDestinationsOpen ? 'rotate-180' : ''}`} 
+                  />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="bg-muted/30">
+                  <div className="py-2 space-y-1">
+                    {destinations.map((destination) => (
+                      <Link
+                        key={destination.name}
+                        to={destination.href}
+                        className="block px-10 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 touch-manipulation"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsDestinationsOpen(false);
+                        }}
+                      >
+                        {destination.name}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+
               <Link
                 to="/contact"
-                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                className="block px-6 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 text-base font-medium touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
               
-              <div className="px-4 py-3 space-y-2">
-                <Button variant="outline" size="sm" className="w-full">
+              <div className="px-6 py-4 space-y-3 border-t border-border/50 mt-4">
+                <Button variant="outline" size="lg" className="w-full touch-manipulation">
                   Get Quote
                 </Button>
-                <Button variant="safari" size="sm" className="w-full">
+                <Button variant="safari" size="lg" className="w-full touch-manipulation">
                   Book Now
                 </Button>
+              </div>
+
+              {/* Mobile Contact Info */}
+              <div className="px-6 py-4 border-t border-border/50 space-y-3">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Phone className="w-4 h-4 text-primary" />
+                  <a href="tel:+254725252412" className="hover:text-primary touch-manipulation">+254725252412</a>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Mail className="w-4 h-4 text-primary" />
+                  <a href="mailto:info@tolynstours.co.ke" className="hover:text-primary touch-manipulation">info@tolynstours.co.ke</a>
+                </div>
               </div>
             </nav>
           </div>
