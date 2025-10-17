@@ -62,55 +62,54 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Company Information */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold mb-4">Tolyns Tours & Travel</h3>
-              <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-                East Africa's premier travel agency, dedicated to creating unforgettable adventures 
-                while preserving Kenya's natural beauty and cultural heritage.
+              <h3 className="text-xl font-bold mb-3">Tolyns Tours & Travel</h3>
+              <p className="text-primary-foreground/80 mb-4 text-sm leading-relaxed">
+                East Africa's premier travel agency creating unforgettable adventures.
               </p>
               
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-accent" />
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-accent flex-shrink-0" />
                   <span className="text-sm">+254725252412</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-accent" />
+                <div className="flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5 text-accent flex-shrink-0" />
                   <span className="text-sm">info@tolynstours.co.ke</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-accent mt-0.5" />
-                  <span className="text-sm">Suite 305, Prestige Plaza<br />Ngong Road, Nairobi</span>
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Suite 305, Prestige Plaza, Ngong Road, Nairobi</span>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"
+                    className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"
                     aria-label={social.name}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-4 h-4" />
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Quick Links */}
+            {/* Our Services */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-              <ul className="space-y-3">
+              <h4 className="text-lg font-semibold mb-4">Our Services</h4>
+              <ul className="space-y-2">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       to={link.href}
-                      className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
+                      className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm block"
                     >
                       {link.name}
                     </Link>
@@ -119,15 +118,15 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Destinations */}
+            {/* Top Destinations */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Top Destinations</h4>
-              <ul className="space-y-3">
+              <h4 className="text-lg font-semibold mb-4">Top Destinations</h4>
+              <ul className="space-y-2">
                 {destinations.map((destination, index) => (
                   <li key={index}>
                     <Link
                       to={destination.href}
-                      className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
+                      className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm block"
                     >
                       {destination.name}
                     </Link>
@@ -135,46 +134,59 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
 
-        {/* Certifications & Awards */}
-        <div className="border-t border-white/10 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {certifications.map((cert, index) => (
-              <div key={index} className="flex items-center gap-3 justify-center md:justify-start">
-                <cert.icon className="w-6 h-6 text-accent" />
-                <span className="text-sm text-primary-foreground/80">{cert.text}</span>
+            {/* Company & Certifications */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 mb-6">
+                {company.slice(0, 4).map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      to={link.href}
+                      className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm block"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Certifications */}
+              <div className="space-y-2">
+                {certifications.map((cert, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <cert.icon className="w-4 h-4 text-accent flex-shrink-0" />
+                    <span className="text-xs text-primary-foreground/80">{cert.text}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+          </div>
+
+          {/* Emergency Contact */}
+          <div className="bg-destructive/20 border border-destructive/30 rounded-lg p-3 mb-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-center text-sm">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-accent" />
+                <span className="font-semibold">24/7 Emergency:</span>
+              </div>
+              <span className="text-accent font-bold">+254725252412</span>
+              <span className="hidden sm:inline text-primary-foreground/40">|</span>
+              <span className="text-accent font-bold">WhatsApp: +254725252412</span>
+            </div>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-white/10 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-primary-foreground/60 text-center md:text-left">
+        <div className="border-t border-white/10 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-primary-foreground/60">
+            <div className="text-center md:text-left">
               © 2024 Tolyns Tours & Travel. All rights reserved. Licensed by Tourism Regulatory Authority (TRA) of Kenya.
             </div>
-            <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/60">
+            <div className="flex flex-wrap gap-4 justify-center">
               <a href="#privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
               <a href="#terms" className="hover:text-accent transition-colors">Terms of Service</a>
               <a href="#cookies" className="hover:text-accent transition-colors">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Emergency Contact Bar */}
-        <div className="bg-destructive/20 border border-destructive/30 rounded-lg p-4 mb-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-accent" />
-              <span className="font-semibold">24/7 Emergency Support:</span>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <span className="text-accent font-bold">+254725252412</span>
-              <span className="text-primary-foreground/60">|</span>
-              <span className="text-accent font-bold">WhatsApp: +254725252412</span>
             </div>
           </div>
         </div>
