@@ -178,15 +178,10 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="safari" size="lg" className="flex-1 group">
-                    Send Message
-                    <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button variant="outline" size="lg" className="sm:w-auto">
-                    Call Instead
-                  </Button>
-                </div>
+                <Button variant="safari" size="lg" className="w-full group">
+                  Send Message
+                  <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
 
                 <div className="bg-primary/5 rounded-lg p-4 border border-primary/10">
                   <p className="text-sm text-muted-foreground">
