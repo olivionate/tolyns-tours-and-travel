@@ -38,8 +38,7 @@ const Footer = () => {
   const company = [
     { name: "About Us", href: "/about-us" },
     { name: "Sustainability", href: "/sustainability" },
-    { name: "Safety Guidelines", href: "/safety-guidelines" },
-    { name: "Careers", href: "/contact" }
+    { name: "Safety Guidelines", href: "/safety-guidelines" }
   ];
 
   const socialLinks = [
