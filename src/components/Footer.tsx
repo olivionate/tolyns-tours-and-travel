@@ -63,7 +63,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Company Information */}
             <div className="lg:col-span-1">
               <h3 className="text-2xl font-bold mb-4">Tolyns Tours & Travel</h3>
@@ -130,38 +130,6 @@ const Footer = () => {
                       className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
                     >
                       {destination.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Newsletter & Company */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Stay Connected</h4>
-              <p className="text-primary-foreground/80 text-sm mb-4">
-                Subscribe to our newsletter for travel tips, special offers, and destination updates.
-              </p>
-              
-              <div className="flex gap-2 mb-6">
-                <Input
-                  placeholder="Your email address"
-                  className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60"
-                />
-                <Button variant="secondary" size="icon">
-                  <Send className="w-4 h-4" />
-                </Button>
-              </div>
-
-              <h5 className="font-semibold mb-4">Company</h5>
-              <ul className="space-y-3">
-                {company.slice(0, 4).map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      to={link.href}
-                      className="text-primary-foreground/80 hover:text-accent transition-colors duration-300 text-sm"
-                    >
-                      {link.name}
                     </Link>
                   </li>
                 ))}
