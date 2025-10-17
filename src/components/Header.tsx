@@ -15,10 +15,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Destinations", href: "#destinations" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Destinations", href: "/#destinations" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const services = [
@@ -69,23 +69,23 @@ const Header = () => {
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex items-center space-x-8">
               <NavigationMenuItem>
-                <a
-                  href="#home"
+                <Link
+                  to="/"
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
                 >
                   Home
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <a
-                  href="#about"
+                <Link
+                  to="/about-us"
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
                 >
-                  About
+                  About Us
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
@@ -111,23 +111,23 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <a
-                  href="#destinations"
+                <Link
+                  to="/#destinations"
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
                 >
                   Destinations
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <a
-                  href="#contact"
+                <Link
+                  to="/#contact"
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
                 >
                   Contact
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -154,20 +154,20 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-border/50 shadow-lg z-50">
             <nav className="py-4 space-y-2">
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
-              <a
-                href="#about"
+              </Link>
+              <Link
+                to="/about-us"
                 className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
-              </a>
+                About Us
+              </Link>
               
               {/* Services Dropdown for Mobile */}
               <div className="px-4 py-2">
@@ -186,20 +186,20 @@ const Header = () => {
                 </div>
               </div>
 
-              <a
-                href="#destinations"
+              <Link
+                to="/#destinations"
                 className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Destinations
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/#contact"
                 className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
               
               <div className="px-4 py-3 space-y-2">
                 <Button variant="outline" size="sm" className="w-full">

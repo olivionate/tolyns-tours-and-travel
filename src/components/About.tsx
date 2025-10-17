@@ -142,12 +142,16 @@ const About = () => {
             immersions, we'll create memories that last a lifetime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="safari" size="lg">
-              Plan My Trip
-            </Button>
-            <Button variant="outline" size="lg">
-              Contact Our Experts
-            </Button>
+            <a href="/#contact">
+              <Button variant="safari" size="lg">
+                Plan My Trip
+              </Button>
+            </a>
+            <a href="/#contact">
+              <Button variant="outline" size="lg">
+                Contact Our Experts
+              </Button>
+            </a>
           </div>
         </div>
       </div>
