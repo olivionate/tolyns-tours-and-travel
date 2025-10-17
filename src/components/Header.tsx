@@ -17,7 +17,6 @@ const Header = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "Destinations", href: "/destinations" },
     { name: "Contact", href: "/#contact" },
   ];
 
@@ -28,6 +27,15 @@ const Header = () => {
     { name: "Cultural Tours", href: "/services/cultural-tours" },
     { name: "Corporate Travel", href: "/services/corporate-travel" },
     { name: "Travel Logistics", href: "/services/travel-logistics" },
+  ];
+
+  const destinations = [
+    { name: "Maasai Mara", href: "/destinations/maasai-mara" },
+    { name: "Amboseli National Park", href: "/destinations/amboseli" },
+    { name: "Diani Beach", href: "/destinations/diani-beach" },
+    { name: "Mount Kenya", href: "/destinations/mount-kenya" },
+    { name: "Lamu Island", href: "/destinations/lamu-island" },
+    { name: "Tsavo National Parks", href: "/destinations/tsavo" },
   ];
 
   return (
@@ -111,13 +119,25 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link
-                  to="/destinations"
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
-                >
+                <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent text-base h-auto p-0">
                   Destinations
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 bg-background">
+                    {destinations.map((destination) => (
+                      <li key={destination.name}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to={destination.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{destination.name}</div>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -186,13 +206,22 @@ const Header = () => {
                 </div>
               </div>
 
-              <Link
-                to="/destinations"
-                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Destinations
-              </Link>
+              {/* Destinations Dropdown for Mobile */}
+              <div className="px-4 py-2">
+                <div className="font-medium text-foreground mb-2">Destinations</div>
+                <div className="pl-4 space-y-2">
+                  {destinations.map((destination) => (
+                    <Link
+                      key={destination.name}
+                      to={destination.href}
+                      className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {destination.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <Link
                 to="/#contact"
                 className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
