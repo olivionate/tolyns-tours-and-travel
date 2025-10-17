@@ -172,12 +172,16 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              Get Quote
-            </Button>
-            <Button variant="safari" size="sm">
-              Book Now
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" size="sm">
+                Get Quote
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="safari" size="sm">
+                Book Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -280,12 +284,16 @@ const Header = () => {
               </Link>
               
               <div className="px-6 py-4 space-y-3 border-t border-border/50 mt-4">
-                <Button variant="outline" size="lg" className="w-full touch-manipulation">
-                  Get Quote
-                </Button>
-                <Button variant="safari" size="lg" className="w-full touch-manipulation">
-                  Book Now
-                </Button>
+                <Link to="/contact" className="block" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="outline" size="lg" className="w-full touch-manipulation">
+                    Get Quote
+                  </Button>
+                </Link>
+                <Link to="/contact" className="block" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="safari" size="lg" className="w-full touch-manipulation">
+                    Book Now
+                  </Button>
+                </Link>
               </div>
 
               {/* Mobile Contact Info */}
