@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,9 +16,17 @@ const Header = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Destinations", href: "#destinations" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const services = [
+    { name: "Wildlife Safaris", href: "#contact" },
+    { name: "Beach & Coastal", href: "#contact" },
+    { name: "Mountain Climbing", href: "#contact" },
+    { name: "Cultural Tours", href: "#contact" },
+    { name: "Corporate Travel", href: "#contact" },
+    { name: "Travel Logistics", href: "#contact" },
   ];
 
   return (
@@ -49,18 +65,43 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
-          </nav>
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                <NavigationMenuItem key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
+                  >
+                    {item.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
+                  </a>
+                </NavigationMenuItem>
+              ))}
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 bg-background">
+                    {services.map((service) => (
+                      <li key={service.name}>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href={service.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{service.name}</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           <div className="hidden md:flex items-center gap-4">
             <Button variant="outline" size="sm">
@@ -82,7 +123,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-border/50 shadow-lg">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-border/50 shadow-lg z-50">
             <nav className="py-4 space-y-2">
               {navItems.map((item) => (
                 <a
@@ -94,6 +135,24 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
+              
+              {/* Services Dropdown for Mobile */}
+              <div className="px-4 py-2">
+                <div className="font-medium text-foreground mb-2">Services</div>
+                <div className="pl-4 space-y-2">
+                  {services.map((service) => (
+                    <a
+                      key={service.name}
+                      href={service.href}
+                      className="block py-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              
               <div className="px-4 py-3 space-y-2">
                 <Button variant="outline" size="sm" className="w-full">
                   Get Quote
