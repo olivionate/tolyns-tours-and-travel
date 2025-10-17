@@ -68,17 +68,25 @@ const Header = () => {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex items-center space-x-8">
-              {navItems.map((item) => (
-                <NavigationMenuItem key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
-                  >
-                    {item.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
-                  </a>
-                </NavigationMenuItem>
-              ))}
+              <NavigationMenuItem>
+                <a
+                  href="#home"
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
+                >
+                  Home
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <a
+                  href="#about"
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
+                >
+                  About
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </NavigationMenuItem>
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent text-base h-auto p-0">
@@ -100,6 +108,26 @@ const Header = () => {
                     ))}
                   </ul>
                 </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <a
+                  href="#destinations"
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
+                >
+                  Destinations
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <a
+                  href="#contact"
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group px-2 py-2"
+                >
+                  Contact
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-safari transition-all duration-300 group-hover:w-full"></span>
+                </a>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -126,16 +154,20 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-border/50 shadow-lg z-50">
             <nav className="py-4 space-y-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              <a
+                href="#home"
+                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
               
               {/* Services Dropdown for Mobile */}
               <div className="px-4 py-2">
@@ -153,6 +185,21 @@ const Header = () => {
                   ))}
                 </div>
               </div>
+
+              <a
+                href="#destinations"
+                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Destinations
+              </a>
+              <a
+                href="#contact"
+                className="block px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </a>
               
               <div className="px-4 py-3 space-y-2">
                 <Button variant="outline" size="sm" className="w-full">
