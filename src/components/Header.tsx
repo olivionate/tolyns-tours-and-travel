@@ -81,7 +81,7 @@ const Header = () => {
               ))}
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent">
+                <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors duration-300 font-medium bg-transparent text-base h-auto p-0">
                   Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
