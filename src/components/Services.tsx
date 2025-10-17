@@ -90,7 +90,7 @@ const Services = () => {
             <Card 
               key={index} 
               id={service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
-              className="group hover:shadow-safari transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden scroll-mt-32"
+              className="group hover:shadow-safari transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden scroll-mt-40"
             >
               {service.image && (
                 <div className="relative h-48 overflow-hidden">
