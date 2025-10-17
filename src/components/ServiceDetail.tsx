@@ -150,7 +150,7 @@ const ServiceDetail = ({
                 <p className="text-xl text-muted-foreground mb-6">
                   Contact us today to start planning your {title.toLowerCase()} experience
                 </p>
-                <Link to="/#contact">
+                <Link to="/contact">
                   <Button variant="safari" size="lg">
                     Contact Us Now
                   </Button>

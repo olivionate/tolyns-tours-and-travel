@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import DestinationsPage from "./pages/Destinations";
+import ContactPage from "./pages/ContactPage";
 import WildlifeSafaris from "./pages/services/WildlifeSafaris";
 import BeachCoastal from "./pages/services/BeachCoastal";
 import MountainClimbing from "./pages/services/MountainClimbing";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/destinations/maasai-mara" element={<MaasaiMara />} />
           <Route path="/destinations/amboseli" element={<Amboseli />} />
           <Route path="/destinations/diani-beach" element={<DianiBeach />} />

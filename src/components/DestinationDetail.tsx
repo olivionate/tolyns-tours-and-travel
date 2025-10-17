@@ -228,7 +228,7 @@ const DestinationDetail = ({
                   <p className="text-white/90 text-sm mb-4">
                     Book your {name} adventure today
                   </p>
-                  <Link to="/#contact">
+                  <Link to="/contact">
                     <Button variant="secondary" size="lg" className="w-full">
                       Book Now
                     </Button>

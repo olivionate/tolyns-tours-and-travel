@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Target, Eye, Heart, Shield, Star, Leaf } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const values = [
@@ -142,16 +143,16 @@ const About = () => {
             immersions, we'll create memories that last a lifetime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#contact">
+            <Link to="/contact">
               <Button variant="safari" size="lg">
                 Plan My Trip
               </Button>
-            </a>
-            <a href="/#contact">
+            </Link>
+            <Link to="/contact">
               <Button variant="outline" size="lg">
                 Contact Our Experts
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

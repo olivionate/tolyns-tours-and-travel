@@ -210,7 +210,7 @@ const Destinations = () => {
             and experiences tailored to your interests and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/#contact">
+            <Link to="/contact">
               <Button variant="safari" size="lg">
                 Create Custom Tour
               </Button>
