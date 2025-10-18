@@ -188,23 +188,27 @@ const Header = () => {
           <button
             className="md:hidden p-2 text-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <>
-            {/* Mobile Menu Backdrop */}
-            <div 
-              className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm top-[100px]"
-              style={{ zIndex: 40 }}
-              onClick={() => setIsMenuOpen(false)}
-              aria-hidden="true"
-            />
-            
-            <div className="md:hidden fixed top-[100px] left-0 right-0 bottom-0 bg-white backdrop-blur-md border-t border-border/50 shadow-lg overflow-y-auto pointer-events-auto" style={{ zIndex: 50 }}>
+      {/* Mobile Menu Backdrop */}
+      {isMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
+          style={{ top: '0' }}
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed left-0 right-0 top-0 bottom-0 z-[70] pointer-events-none">
+          <div className="absolute top-[100px] left-0 right-0 bottom-0 bg-white border-t border-border/50 shadow-lg overflow-y-auto pointer-events-auto">
             <nav className="py-4 space-y-1 max-h-[calc(100vh-100px)] pb-safe">
               <Link
                 to="/"
@@ -309,9 +313,8 @@ const Header = () => {
               </div>
             </nav>
           </div>
-          </>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };
