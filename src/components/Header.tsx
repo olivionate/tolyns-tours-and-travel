@@ -58,6 +58,7 @@ const Header = () => {
   ];
 
   return (
+    <>
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-safari">
       <div className="container mx-auto px-2 sm:px-4">
         {/* Top bar with contact info */}
@@ -194,22 +195,22 @@ const Header = () => {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile Menu Backdrop */}
-      {isMenuOpen && (
-        <div 
-          className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
-          style={{ top: '0' }}
-          onClick={() => setIsMenuOpen(false)}
-          aria-hidden="true"
-        />
-      )}
+    {/* Mobile Menu Backdrop */}
+    {isMenuOpen && (
+      <div 
+        className="md:hidden fixed inset-0 bg-black/50 z-[60]"
+        onClick={() => setIsMenuOpen(false)}
+        aria-hidden="true"
+      />
+    )}
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden fixed left-0 right-0 top-0 bottom-0 z-[70] pointer-events-none">
-          <div className="absolute top-[100px] left-0 right-0 bottom-0 bg-white border-t border-border/50 shadow-lg overflow-y-auto pointer-events-auto">
-            <nav className="py-4 space-y-1 max-h-[calc(100vh-100px)] pb-safe">
+    {/* Mobile Navigation Menu */}
+    {isMenuOpen && (
+      <div className="md:hidden fixed inset-0 z-[70] pointer-events-none">
+        <div className="absolute top-[100px] left-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto pointer-events-auto">
+          <nav className="py-4 space-y-1">
               <Link
                 to="/"
                 className="block px-6 py-3 text-foreground hover:text-primary hover:bg-muted/50 transition-colors duration-300 text-base font-medium touch-manipulation"
@@ -310,12 +311,12 @@ const Header = () => {
                   <Mail className="w-4 h-4 text-primary" />
                   <a href="mailto:info@tolynstours.co.ke" className="hover:text-primary touch-manipulation">info@tolynstours.co.ke</a>
                 </div>
-              </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
-      )}
-    </header>
+      </div>
+    )}
+    </>
   );
 };
 
