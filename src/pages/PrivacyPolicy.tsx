@@ -248,7 +248,7 @@ const PrivacyPolicy = () => {
                   <div>
                     <p className="font-semibold">Address</p>
                     <p className="text-muted-foreground">
-                      Suite 305, Prestige Plaza, Ngong Road<br />
+                      Suite 250, Ngei I, Lang'ata Road<br />
                       Nairobi, Kenya
                     </p>
                   </div>

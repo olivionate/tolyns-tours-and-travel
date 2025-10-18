@@ -306,7 +306,7 @@ const TermsOfService = () => {
               
               <div className="space-y-3">
                 <p><strong>Tolyns Tours & Travel</strong></p>
-                <p className="text-muted-foreground">Suite 305, Prestige Plaza, Ngong Road, Nairobi, Kenya</p>
+                <p className="text-muted-foreground">Suite 250, Ngei I, Lang'ata Road, Nairobi, Kenya</p>
                 <p className="text-muted-foreground">Email: info@tolynstours.co.ke</p>
                 <p className="text-muted-foreground">Phone: +254725252412</p>
                 <p className="text-muted-foreground">WhatsApp: +254725252412</p>

@@ -79,7 +79,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Suite 305, Prestige Plaza, Ngong Road, Nairobi</span>
+                  <span className="text-sm">Suite 250, Ngei I, Lang'ata Road, Nairobi</span>
                 </div>
               </div>
 

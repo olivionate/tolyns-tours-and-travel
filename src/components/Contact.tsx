@@ -32,8 +32,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      primary: "Suite 305, Prestige Plaza",
-      secondary: "Ngong Road, Nairobi, Kenya",
+      primary: "Suite 250, Ngei I",
+      secondary: "Lang'ata Road, Nairobi, Kenya",
       description: "Monday - Friday: 8AM - 6PM"
     },
     {
