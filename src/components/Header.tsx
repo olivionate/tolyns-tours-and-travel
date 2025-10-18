@@ -193,18 +193,18 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Backdrop */}
-        {isMenuOpen && (
-          <div 
-            className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 top-[100px]"
-            onClick={() => setIsMenuOpen(false)}
-            aria-hidden="true"
-          />
-        )}
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed top-[100px] left-0 right-0 bottom-0 bg-white/98 backdrop-blur-md border-t border-border/50 shadow-lg z-50 overflow-y-auto">
+          <>
+            {/* Mobile Menu Backdrop */}
+            <div 
+              className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm top-[100px]"
+              style={{ zIndex: 40 }}
+              onClick={() => setIsMenuOpen(false)}
+              aria-hidden="true"
+            />
+            
+            <div className="md:hidden fixed top-[100px] left-0 right-0 bottom-0 bg-white backdrop-blur-md border-t border-border/50 shadow-lg overflow-y-auto pointer-events-auto" style={{ zIndex: 50 }}>
             <nav className="py-4 space-y-1 max-h-[calc(100vh-100px)] pb-safe">
               <Link
                 to="/"
@@ -309,6 +309,7 @@ const Header = () => {
               </div>
             </nav>
           </div>
+          </>
         )}
       </div>
     </header>
