@@ -59,7 +59,7 @@ const Header = () => {
 
   return (
     <>
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-safari">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-safari will-change-transform">
       <div className="container mx-auto px-2 sm:px-4">
         {/* Top bar with contact info */}
         <div className="border-b border-border/50 py-2 hidden md:block">
@@ -81,7 +81,7 @@ const Header = () => {
         </div>
 
         {/* Main navigation */}
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-4 relative">{/* Logo */}
           <div className="flex items-center gap-2 sm:gap-3">
             <img 
               src="/lovable-uploads/f48fed82-3831-462d-9269-66fb62dffcc1.png" 
@@ -187,9 +187,10 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-primary"
+            className="md:hidden p-2 text-primary relative z-[51] flex items-center justify-center"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            type="button"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

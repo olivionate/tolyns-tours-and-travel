@@ -207,4 +207,14 @@
     -ms-user-select: none;
     user-select: none;
   }
+
+  /* Ensure mobile menu button is always visible on mobile */
+  @media (max-width: 768px) {
+    header button[aria-label="Toggle menu"] {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+  }
 }
